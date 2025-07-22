@@ -173,6 +173,21 @@ h1, h2, h3, h4 {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Resume button styling */
+/* Resume Button - Matching View Projects Button */
+.btn-resume {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border: none;
+}
+
+.btn-resume:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a52d6 0%, #5d3b8a 100%); /* Darker gradient on hover */
 }
 
 /* Profile image container styles */
@@ -219,12 +234,14 @@ h1, h2, h3, h4 {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    border: none;
 }
 
 .btn-primary:hover {
@@ -235,11 +252,38 @@ h1, h2, h3, h4 {
 .btn-secondary {
     background: var(--light-gray);
     color: var(--dark-color);
-    border: none;
 }
 
 .btn-secondary:hover {
     background: #cbd5e0;
+    transform: translateY(-3px);
+}
+
+.btn i {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 .contact-info {
